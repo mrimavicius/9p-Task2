@@ -1,0 +1,51 @@
+html {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+body {
+    background: rgb(78, 74, 74);
+    color: white;
+    text-align: center;
+    margin: 300px;
+}
+
+h2 {
+    padding: 20px;
+    position: relative;
+}
+
+h2::before {
+    content: "";
+    position: absolute;
+    background: red;
+    left: 85px;
+    border-bottom: 3px solid red;
+    width: 150px;
+    height: 30px;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+h2:hover:before {
+    opacity: 1;
+    background: red;
+    transform: translate(275px);
+}
+
+h2:after {
+    content: "";
+    position: absolute;
+    right: 85px;
+    border-bottom: 3px solid red;
+    width: 150px;
+    height: 30px;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+h2:hover::after {
+    transform: translate(-275px);
+    transition-delay: 0.5s;
+    opacity: 1;
+}
